@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Quyền riêng tư soclu-uploader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+
+/* Layout: one reading column, a pinned language switch, sections as numbered clauses (legal documents are ordered). */
+:root {
+  --paper: #fbf8f3;
+  --ink: #2a2622;
+  --muted: #6f655b;
+  --rule: #e6ddd1;
+  --accent: #b5532a;     /* cam đất của kênh */
+  --tag: #c8352b;        /* thẻ giá đỏ */
+  --chip: #f3e7dc;
+  --font: "Be Vietnam Pro", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #1d1a17; --ink: #efe8df; --muted: #b0a597; --rule: #3a332d;
+  --accent: #e3895f; --tag: #ef6b5f; --chip: #2c2621; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #1d1a17; --ink: #efe8df; --muted: #b0a597; --rule: #3a332d;
+  --accent: #e3895f; --tag: #ef6b5f; --chip: #2c2621; color-scheme: dark }
+
+body { background: var(--paper); color: var(--ink); font: 400 16px/1.7 var(--font); }
+.wrap { max-width: 44rem; margin: 0 auto; padding-block: 2.5rem 4rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: .6rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+.tag { justify-self: start; background: var(--tag); color: #fff; font-weight: 700; font-size: .78rem;
+  letter-spacing: .08em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 3px; }
+h1 { margin: 0; font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.2; font-weight: 800; text-wrap: balance; }
+.meta { margin: 0; color: var(--muted); font-size: .92rem; }
+nav { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .4rem; }
+nav a { color: var(--ink); text-decoration: none; background: var(--chip); padding: .3rem .8rem; border-radius: 999px; font-size: .9rem; font-weight: 500; }
+nav a:hover, nav a:focus-visible { color: var(--accent); outline: 2px solid var(--accent); outline-offset: 1px; }
+.lang { margin-top: 2.5rem; display: grid; gap: 1.6rem; }
+.lang > h2 { margin: 0; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+ol.clauses { margin: 0; padding: 0; list-style: none; counter-reset: c; display: grid; gap: 1.4rem; }
+ol.clauses > li { counter-increment: c; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); column-gap: .4rem; }
+ol.clauses > li::before { content: counter(c); color: var(--accent); font-weight: 800; font-size: 1.05rem; line-height: 1.6; font-variant-numeric: tabular-nums; }
+h3 { margin: 0 0 .3rem; font-size: 1.05rem; font-weight: 700; }
+p, ul { margin: 0 0 .5rem; }
+ul { padding-left: 1.1rem; }
+a { color: var(--accent); }
+.mail { font-weight: 700; user-select: all; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0 0; }
+footer { margin-top: 2.5rem; color: var(--muted); font-size: .88rem; }
+table { width: 100%; border-collapse: collapse; font-size: .93rem; }
+.tbl { overflow-x: auto; margin: .3rem 0 .6rem; }
+th, td { text-align: left; vertical-align: top; padding: .5rem .6rem; border-bottom: 1px solid var(--rule); }
+th { color: var(--muted); font-weight: 500; font-size: .8rem; letter-spacing: .05em; text-transform: uppercase; }
+td:first-child { font-weight: 700; white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <span class="tag">Sóc Lú · soclu-uploader</span>
+    <h1>Chính sách quyền riêng tư<br>Privacy Policy</h1>
+    <p class="meta">Hiệu lực từ 25/11/2026 · Effective 25 November 2026</p>
+    <nav aria-label="Ngôn ngữ / Language"><a href="#vi">Tiếng Việt</a><a href="#en">English</a><a href="#data-deletion">Xoá dữ liệu / Data deletion</a></nav>
+  </header>
+<section class="lang" id="vi" lang="vi"><h2>Tiếng Việt</h2><ol class="clauses"><li><div><h3>Phạm vi</h3><p>Chính sách này mô tả cách <strong>soclu-uploader</strong>, công cụ nội bộ của kênh <strong>Sóc Lú</strong> (SocLuOfficial), xử lý dữ liệu khi kết nối với TikTok, YouTube và Facebook. Công cụ chạy trên máy tính của người vận hành kênh và chỉ kết nối với các tài khoản của chính kênh.</p></div></li><li><div><h3>Dữ liệu công cụ truy cập</h3><div class="tbl"><table><tr><th>Nền tảng</th><th>Dữ liệu công cụ truy cập</th><th>Dùng để làm gì</th></tr><tr><td>TikTok</td><td>Mã tài khoản (open_id), thông tin hồ sơ cơ bản (tên hiển thị, ảnh đại diện) theo quyền user.info.basic; mã truy cập và mã làm mới; trạng thái tải lên</td><td>Đưa video đã dựng vào hộp thư nháp của tài khoản Sóc Lú (quyền video.upload). Người vận hành tự đăng trong ứng dụng TikTok</td></tr><tr><td>YouTube</td><td>Mã truy cập OAuth; tên và mã kênh; trạng thái video (riêng tư, giờ công khai đã hẹn)</td><td>Tải video, ảnh thumbnail và phụ đề lên kênh Sóc Lú; đặt giờ công khai; thêm video đã công khai vào danh sách phát của kênh</td></tr><tr><td>Facebook</td><td>Mã truy cập của Trang Sóc Lú; tên và mã Trang; trạng thái video (đang xử lý, đã hẹn, đã đăng)</td><td>Tải video lên Trang Sóc Lú và hẹn giờ đăng; kiểm tra lịch đã được nhận</td></tr></table></div><p>Công cụ <strong>không</strong> thu thập dữ liệu của người xem, người theo dõi hay bất kỳ người dùng nào khác, không đọc tin nhắn và không dùng cookie hay công cụ phân tích.</p></div></li><li><div><h3>Lưu trữ</h3><p>Mã truy cập được lưu trong tệp trên máy tính của người vận hành, chỉ tài khoản máy đó đọc được, và không được đưa lên kho mã hay máy chủ nào. Video và thông tin bài đăng được gửi thẳng từ máy tính đó tới API của nền tảng tương ứng. Công cụ không có máy chủ riêng.</p></div></li><li><div><h3>Chia sẻ</h3><p>Dữ liệu chỉ được gửi tới chính nền tảng mà video được đăng lên (TikTok, Google/YouTube, Meta). Dữ liệu không được bán, cho thuê hay chia sẻ với bên thứ ba nào khác.</p></div></li><li><div><h3>Dịch vụ API của YouTube</h3><p>Công cụ dùng Dịch vụ API của YouTube. Khi dùng công cụ với YouTube, bạn đồng ý với <a href="https://www.youtube.com/t/terms" rel="noopener">Điều khoản dịch vụ của YouTube</a>. Dữ liệu Google xử lý theo <a href="https://policies.google.com/privacy" rel="noopener">Chính sách quyền riêng tư của Google</a>.</p></div></li><li><div><h3>Thời gian lưu giữ</h3><p>Mã truy cập được giữ cho tới khi quyền bị thu hồi hoặc công cụ không còn được dùng. Nhật ký đăng bài trên máy chỉ ghi mã video và giờ hẹn, không chứa mã truy cập.</p></div></li><li><div><h3>Thu hồi quyền và xoá dữ liệu</h3><p id="data-deletion">Có thể thu hồi quyền của công cụ bất kỳ lúc nào:</p><ul><li>TikTok: Cài đặt và quyền riêng tư → Bảo mật và quyền → Quyền ứng dụng, chọn soclu-uploader → Xoá quyền truy cập.</li><li>Google/YouTube: <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a> → soclu-uploader → Xoá quyền truy cập.</li><li>Facebook: Cài đặt → Tiện ích tích hợp doanh nghiệp → soclu-uploader → Gỡ.</li></ul><p>Sau khi thu hồi, người vận hành xoá các tệp mã truy cập trên máy. Muốn yêu cầu xoá dữ liệu, gửi email tới địa chỉ ở mục Liên hệ; yêu cầu được xử lý trong vòng 30 ngày.</p></div></li><li><div><h3>Trẻ em</h3><p>Công cụ không dành cho trẻ em và không thu thập dữ liệu của trẻ em.</p></div></li><li><div><h3>Thay đổi</h3><p>Chính sách có thể được cập nhật; ngày hiệu lực ở đầu trang sẽ thay đổi theo.</p></div></li><li><div><h3>Liên hệ</h3><p>Email: <span class="mail">soclu.official@gmail.com</span></p></div></li></ol></section>
+  <hr>
+<section class="lang" id="en" lang="en"><h2>English</h2><ol class="clauses"><li><div><h3>Scope</h3><p>This policy describes how <strong>soclu-uploader</strong>, the internal tool of the <strong>Sóc Lú</strong> (SocLuOfficial) channel, handles data when it connects to TikTok, YouTube and Facebook. The tool runs on the channel operator's own computer and connects only to the channel's own accounts.</p></div></li><li><div><h3>Data the tool accesses</h3><div class="tbl"><table><tr><th>Platform</th><th>Data the tool accesses</th><th>What it is used for</th></tr><tr><td>TikTok</td><td>Account ID (open_id) and basic profile info (display name, avatar) under the user.info.basic scope; access and refresh tokens; upload status</td><td>Send finished videos to the Sóc Lú account's inbox as drafts (video.upload scope). The operator publishes them manually in the TikTok app</td></tr><tr><td>YouTube</td><td>OAuth tokens; channel name and ID; video status (privacy, scheduled publish time)</td><td>Upload videos, thumbnails and captions to the Sóc Lú channel; set the publish time; add published videos to the channel's playlist</td></tr><tr><td>Facebook</td><td>Page access token for the Sóc Lú Page; Page name and ID; video status (processing, scheduled, published)</td><td>Upload videos to the Sóc Lú Page and schedule them; check that the schedule was accepted</td></tr></table></div><p>The tool does <strong>not</strong> collect data about viewers, followers or any other users, does not read messages, and uses no cookies or analytics.</p></div></li><li><div><h3>Storage</h3><p>Access tokens are stored in files on the operator's computer, readable only by that computer's user account, and are never committed to a code repository or uploaded to any server. Videos and post details are sent directly from that computer to the relevant platform's API. The tool has no server of its own.</p></div></li><li><div><h3>Sharing</h3><p>Data is sent only to the platform the video is posted to (TikTok, Google/YouTube, Meta). It is not sold, rented or shared with any other third party.</p></div></li><li><div><h3>YouTube API Services</h3><p>The tool uses YouTube API Services. By using the tool with YouTube you agree to the <a href="https://www.youtube.com/t/terms" rel="noopener">YouTube Terms of Service</a>. Google processes data under the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p></div></li><li><div><h3>Retention</h3><p>Access tokens are kept until access is revoked or the tool is no longer used. The local posting log records only video IDs and scheduled times, never access tokens.</p></div></li><li><div><h3>Revoking access and deleting data</h3><p id="data-deletion-en">Access can be revoked at any time:</p><ul><li>TikTok: Settings and privacy → Security and permissions → App permissions, choose soclu-uploader → Remove access.</li><li>Google/YouTube: <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a> → soclu-uploader → Remove access.</li><li>Facebook: Settings → Business integrations → soclu-uploader → Remove.</li></ul><p>After access is revoked, the operator deletes the token files from the computer. To request deletion of data, email the address under Contact; requests are handled within 30 days.</p></div></li><li><div><h3>Children</h3><p>The tool is not directed at children and does not collect children's data.</p></div></li><li><div><h3>Changes</h3><p>This policy may be updated; the effective date at the top of this page will change accordingly.</p></div></li><li><div><h3>Contact</h3><p>Email: <span class="mail">soclu.official@gmail.com</span></p></div></li></ol></section>
+  <footer>Sóc Lú — kênh kể chuyện về những cái giá của đồng tiền.</footer>
+</div>
+
+</body>
+</html>

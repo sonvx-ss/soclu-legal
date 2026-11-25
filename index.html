@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>soclu-uploader</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+
+/* Layout: one reading column, a pinned language switch, sections as numbered clauses (legal documents are ordered). */
+:root {
+  --paper: #fbf8f3;
+  --ink: #2a2622;
+  --muted: #6f655b;
+  --rule: #e6ddd1;
+  --accent: #b5532a;     /* cam đất của kênh */
+  --tag: #c8352b;        /* thẻ giá đỏ */
+  --chip: #f3e7dc;
+  --font: "Be Vietnam Pro", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #1d1a17; --ink: #efe8df; --muted: #b0a597; --rule: #3a332d;
+  --accent: #e3895f; --tag: #ef6b5f; --chip: #2c2621; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #1d1a17; --ink: #efe8df; --muted: #b0a597; --rule: #3a332d;
+  --accent: #e3895f; --tag: #ef6b5f; --chip: #2c2621; color-scheme: dark }
+
+body { background: var(--paper); color: var(--ink); font: 400 16px/1.7 var(--font); }
+.wrap { max-width: 44rem; margin: 0 auto; padding-block: 2.5rem 4rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: .6rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+.tag { justify-self: start; background: var(--tag); color: #fff; font-weight: 700; font-size: .78rem;
+  letter-spacing: .08em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 3px; }
+h1 { margin: 0; font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.2; font-weight: 800; text-wrap: balance; }
+.meta { margin: 0; color: var(--muted); font-size: .92rem; }
+nav { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .4rem; }
+nav a { color: var(--ink); text-decoration: none; background: var(--chip); padding: .3rem .8rem; border-radius: 999px; font-size: .9rem; font-weight: 500; }
+nav a:hover, nav a:focus-visible { color: var(--accent); outline: 2px solid var(--accent); outline-offset: 1px; }
+.lang { margin-top: 2.5rem; display: grid; gap: 1.6rem; }
+.lang > h2 { margin: 0; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+ol.clauses { margin: 0; padding: 0; list-style: none; counter-reset: c; display: grid; gap: 1.4rem; }
+ol.clauses > li { counter-increment: c; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); column-gap: .4rem; }
+ol.clauses > li::before { content: counter(c); color: var(--accent); font-weight: 800; font-size: 1.05rem; line-height: 1.6; font-variant-numeric: tabular-nums; }
+h3 { margin: 0 0 .3rem; font-size: 1.05rem; font-weight: 700; }
+p, ul { margin: 0 0 .5rem; }
+ul { padding-left: 1.1rem; }
+a { color: var(--accent); }
+.mail { font-weight: 700; user-select: all; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0 0; }
+footer { margin-top: 2.5rem; color: var(--muted); font-size: .88rem; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="tag">Sóc Lú · soclu-uploader</span>
+    <h1>soclu-uploader</h1>
+    <p class="meta">Công cụ nội bộ của kênh Sóc Lú · Internal tool of the Sóc Lú channel</p>
+    <nav aria-label="Pages"><a href="terms.html">Điều khoản sử dụng / Terms of Service</a><a href="privacy.html">Chính sách quyền riêng tư / Privacy Policy</a><a href="privacy.html#data-deletion">Xoá dữ liệu / Data deletion</a></nav>
+  </header>
+  <footer>Sóc Lú — kênh kể chuyện về những cái giá của đồng tiền.</footer>
+</div>
+</body>
+</html>

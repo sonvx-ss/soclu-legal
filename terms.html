@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Điều khoản soclu-uploader</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;800&display=swap">
+<style>
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; }
+
+/* Layout: one reading column, a pinned language switch, sections as numbered clauses (legal documents are ordered). */
+:root {
+  --paper: #fbf8f3;
+  --ink: #2a2622;
+  --muted: #6f655b;
+  --rule: #e6ddd1;
+  --accent: #b5532a;     /* cam đất của kênh */
+  --tag: #c8352b;        /* thẻ giá đỏ */
+  --chip: #f3e7dc;
+  --font: "Be Vietnam Pro", "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #1d1a17; --ink: #efe8df; --muted: #b0a597; --rule: #3a332d;
+  --accent: #e3895f; --tag: #ef6b5f; --chip: #2c2621; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #1d1a17; --ink: #efe8df; --muted: #b0a597; --rule: #3a332d;
+  --accent: #e3895f; --tag: #ef6b5f; --chip: #2c2621; color-scheme: dark }
+
+body { background: var(--paper); color: var(--ink); font: 400 16px/1.7 var(--font); }
+.wrap { max-width: 44rem; margin: 0 auto; padding-block: 2.5rem 4rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: .6rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--rule); }
+.tag { justify-self: start; background: var(--tag); color: #fff; font-weight: 700; font-size: .78rem;
+  letter-spacing: .08em; text-transform: uppercase; padding: .25rem .7rem; border-radius: 3px; }
+h1 { margin: 0; font-size: clamp(1.7rem, 4.5vw, 2.3rem); line-height: 1.2; font-weight: 800; text-wrap: balance; }
+.meta { margin: 0; color: var(--muted); font-size: .92rem; }
+nav { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .4rem; }
+nav a { color: var(--ink); text-decoration: none; background: var(--chip); padding: .3rem .8rem; border-radius: 999px; font-size: .9rem; font-weight: 500; }
+nav a:hover, nav a:focus-visible { color: var(--accent); outline: 2px solid var(--accent); outline-offset: 1px; }
+.lang { margin-top: 2.5rem; display: grid; gap: 1.6rem; }
+.lang > h2 { margin: 0; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+ol.clauses { margin: 0; padding: 0; list-style: none; counter-reset: c; display: grid; gap: 1.4rem; }
+ol.clauses > li { counter-increment: c; display: grid; grid-template-columns: 2.2rem minmax(0, 1fr); column-gap: .4rem; }
+ol.clauses > li::before { content: counter(c); color: var(--accent); font-weight: 800; font-size: 1.05rem; line-height: 1.6; font-variant-numeric: tabular-nums; }
+h3 { margin: 0 0 .3rem; font-size: 1.05rem; font-weight: 700; }
+p, ul { margin: 0 0 .5rem; }
+ul { padding-left: 1.1rem; }
+a { color: var(--accent); }
+.mail { font-weight: 700; user-select: all; }
+hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0 0; }
+footer { margin-top: 2.5rem; color: var(--muted); font-size: .88rem; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <span class="tag">Sóc Lú · soclu-uploader</span>
+    <h1>Điều khoản sử dụng<br>Terms of Service</h1>
+    <p class="meta">Hiệu lực từ 25/11/2026 · Effective 25 November 2026</p>
+    <nav aria-label="Ngôn ngữ / Language"><a href="#vi">Tiếng Việt</a><a href="#en">English</a></nav>
+  </header>
+
+  <section class="lang" id="vi" lang="vi">
+    <h2>Tiếng Việt</h2>
+    <ol class="clauses">
+      <li><div>
+        <h3>Ứng dụng này là gì</h3>
+        <p>soclu-uploader là công cụ nội bộ do người vận hành kênh <strong>Sóc Lú</strong> (SocLuOfficial) tạo ra và tự sử dụng. Công cụ chạy trên máy tính của người vận hành và dùng API chính thức của TikTok, YouTube và Facebook để:</p>
+        <ul>
+          <li>tải video đã dựng của kênh vào <strong>hộp thư nháp TikTok</strong> của tài khoản Sóc Lú, để người vận hành tự xem lại và tự bấm đăng trong ứng dụng TikTok;</li>
+          <li>tải video lên kênh YouTube Sóc Lú ở chế độ riêng tư kèm giờ công khai đã hẹn;</li>
+          <li>hẹn giờ đăng video lên Trang Facebook Sóc Lú.</li>
+        </ul>
+      </div></li>
+      <li><div>
+        <h3>Ai được dùng</h3>
+        <p>Công cụ chỉ dùng cho các tài khoản của chính kênh Sóc Lú. Không có đăng ký công khai, không cung cấp cho người dùng bên ngoài và không truy cập tài khoản của bất kỳ ai khác.</p>
+      </div></li>
+      <li><div>
+        <h3>Nội dung và trách nhiệm</h3>
+        <p>Mọi video đăng qua công cụ là nội dung gốc của kênh Sóc Lú. Người vận hành chịu trách nhiệm bảo đảm nội dung tuân thủ luật pháp và quy định của từng nền tảng. Trên TikTok, công cụ không tự đăng công khai: mỗi video chỉ được đăng sau khi người vận hành kiểm tra và tự bấm đăng.</p>
+      </div></li>
+      <li><div>
+        <h3>Điều khoản của nền tảng</h3>
+        <p>Việc dùng công cụ đồng thời tuân theo <a href="https://www.tiktok.com/legal/page/global/terms-of-service/en" rel="noopener">Điều khoản dịch vụ của TikTok</a>, <a href="https://www.youtube.com/t/terms" rel="noopener">Điều khoản dịch vụ của YouTube</a> và <a href="https://www.facebook.com/terms.php" rel="noopener">Điều khoản của Meta</a>. Nếu có khác biệt, điều khoản của nền tảng được ưu tiên.</p>
+      </div></li>
+      <li><div>
+        <h3>Dữ liệu</h3>
+        <p>Cách công cụ xử lý dữ liệu được mô tả trong <a href="privacy.html" rel="noopener">Chính sách quyền riêng tư của soclu-uploader</a>.</p>
+      </div></li>
+      <li><div>
+        <h3>Không bảo đảm</h3>
+        <p>Công cụ được cung cấp "nguyên trạng", phục vụ nhu cầu nội bộ của kênh. Người vận hành không bảo đảm công cụ luôn hoạt động không lỗi hoặc không gián đoạn, và không chịu trách nhiệm cho thiệt hại gián tiếp phát sinh từ việc dùng công cụ, trong phạm vi pháp luật cho phép.</p>
+      </div></li>
+      <li><div>
+        <h3>Ngừng sử dụng và thu hồi quyền</h3>
+        <p>Người vận hành có thể ngừng công cụ bất kỳ lúc nào. Quyền truy cập của công cụ có thể bị thu hồi trực tiếp trong phần cài đặt bảo mật của TikTok, Google và Facebook.</p>
+      </div></li>
+      <li><div>
+        <h3>Thay đổi và luật áp dụng</h3>
+        <p>Điều khoản có thể được cập nhật; ngày hiệu lực ở đầu trang sẽ thay đổi theo. Điều khoản này được điều chỉnh theo pháp luật Việt Nam.</p>
+      </div></li>
+      <li><div>
+        <h3>Liên hệ</h3>
+        <p>Email: <span class="mail">soclu.official@gmail.com</span></p>
+      </div></li>
+    </ol>
+  </section>
+
+  <hr>
+
+  <section class="lang" id="en" lang="en">
+    <h2>English</h2>
+    <ol class="clauses">
+      <li><div>
+        <h3>What this app is</h3>
+        <p>soclu-uploader is an internal tool built and used solely by the operator of the <strong>Sóc Lú</strong> (SocLuOfficial) channel. It runs on the operator's own computer and uses the official TikTok, YouTube and Facebook APIs to:</p>
+        <ul>
+          <li>upload the channel's finished videos to the Sóc Lú account's <strong>TikTok inbox as drafts</strong>, so the operator can review them and publish them manually in the TikTok app;</li>
+          <li>upload videos to the Sóc Lú YouTube channel as private videos with a scheduled publish time;</li>
+          <li>schedule videos on the Sóc Lú Facebook Page.</li>
+        </ul>
+      </div></li>
+      <li><div>
+        <h3>Who may use it</h3>
+        <p>The tool is used only with the Sóc Lú channel's own accounts. There is no public sign-up, it is not offered to outside users, and it does not access anyone else's account.</p>
+      </div></li>
+      <li><div>
+        <h3>Content and responsibility</h3>
+        <p>All videos posted through the tool are the Sóc Lú channel's original content. The operator is responsible for making sure the content complies with the law and with each platform's rules. On TikTok the tool never publishes on its own: every video is published only after the operator reviews it and taps Post.</p>
+      </div></li>
+      <li><div>
+        <h3>Platform terms</h3>
+        <p>Use of the tool is also subject to the <a href="https://www.tiktok.com/legal/page/global/terms-of-service/en" rel="noopener">TikTok Terms of Service</a>, the <a href="https://www.youtube.com/t/terms" rel="noopener">YouTube Terms of Service</a> and the <a href="https://www.facebook.com/terms.php" rel="noopener">Meta Terms</a>. Where they differ, the platform's terms prevail.</p>
+      </div></li>
+      <li><div>
+        <h3>Data</h3>
+        <p>How the tool handles data is described in the <a href="privacy.html" rel="noopener">soclu-uploader Privacy Policy</a>.</p>
+      </div></li>
+      <li><div>
+        <h3>No warranty</h3>
+        <p>The tool is provided "as is" for the channel's internal use. The operator does not guarantee that it will be error-free or uninterrupted and, to the extent permitted by law, is not liable for indirect damages arising from its use.</p>
+      </div></li>
+      <li><div>
+        <h3>Termination and revoking access</h3>
+        <p>The operator may stop using the tool at any time. The tool's access can be revoked at any time in the security settings of TikTok, Google and Facebook.</p>
+      </div></li>
+      <li><div>
+        <h3>Changes and governing law</h3>
+        <p>These terms may be updated; the effective date at the top of this page will change accordingly. These terms are governed by the laws of Vietnam.</p>
+      </div></li>
+      <li><div>
+        <h3>Contact</h3>
+        <p>Email: <span class="mail">soclu.official@gmail.com</span></p>
+      </div></li>
+    </ol>
+  </section>
+
+  <footer>Sóc Lú — kênh kể chuyện về những cái giá của đồng tiền.</footer>
+</div>
+
+</body>
+</html>
